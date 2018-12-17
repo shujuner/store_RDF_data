@@ -65,54 +65,73 @@ int main()
             cout<<subSet.size()<<endl;
         }
     }
-    input.close();
-    vector<subject>::iterator it=subSet.begin();
-    /*for(;it!=subSet.end();it++)
+    //检查数据存储是否正确-------------------------------------------------------------start
+    /*cout<<"subSet size="<<subSet.size()<<endl;
+    cout<<"第一项的主体是"<<subSet[0].sub<<endl;
+    for(auto iter : subSet[0].p)
     {
-        cout<<"主语是: "<<revSubDict[it->sub]<<" 谓语有: ";
-        vector<predicate>::iterator pIt=it->p.begin();
-        for(;pIt!=it->p.end();pIt++)
+        cout<<"第一项的谓语为:"<<iter.pre<<endl;
+        cout<<"obj"<<endl;
+        for(auto i : iter.obj)
         {
-            cout<<revPreDict[pIt->pre]<<" ";
+            cout<<i<<" ";
         }
-        cout<<"宾语有: ";
-        pIt=it->p.begin();
-        for(;pIt!=it->p.end();pIt++)
-        {
-            vector<int>::iterator oIt=pIt->obj.begin();
-            for(;oIt!=pIt->obj.end();oIt++)
-                cout<<revSubDict[*oIt]<<" ";
-        }
-
-        cout<<endl;
     }*/
-
+    //检查数据存储是否正确-------------------------------------------------------------end
+    input.close();
     double run_time;
 	_LARGE_INTEGER time_start;
 	_LARGE_INTEGER time_over;
 	double dqFreq;
 	LARGE_INTEGER f;
-	QueryPerformanceFrequency(&f);
-	dqFreq=(double)f.QuadPart;
-	QueryPerformanceCounter(&time_start);
-
 	//-----------------------------------------------------------------s p ?o查询---------------------------------------------------------------------------------//
-   // int pp=subSet[sPosition[subDict["<http://db.uwaterloo.ca/~galuc/wsdbm/User44234>"]]].pPosition[preDict["<http://db.uwaterloo.ca/~galuc/wsdbm/friendOf>"]];
-  //  int objIndex=subSet[sPosition[subDict["_:c"]]].p[pp].obj[0];
+//    int pp=subSet[sPosition[subDict["<http://db.uwaterloo.ca/~galuc/wsdbm/User44234>"]]].pPosition[preDict["<http://db.uwaterloo.ca/~galuc/wsdbm/friendOf>"]];
+//    int objIndex=subSet[sPosition[subDict["_:c"]]].p[pp].obj[0];
     //-----------------------------------------------------------------s ?p o查询---------------------------------------------------------------------------------//
-
-    subject selectP=subSet[sPosition[subDict["<http://db.uwaterloo.ca/~galuc/wsdbm/User44234>"]]];
-    vector<predicate> preInSelectData=selectP.p;
-    for(auto iter: preInSelectData)
+    string cinS,cinP,cinO;
+    int choose;
+    cout<<"请输入你要执行的查询类型0(s p ?o),1(s ?p o),2(quit):"<<endl;
+    while(cin>>choose)
     {
-        if(iter.objExist[objDict["<http://db.uwaterloo.ca/~galuc/wsdbm/User57186>"]]==1)
+        if(choose==0)
         {
-            cout<<iter.pre<<endl;
+            cout<<"请输入主语和谓语，以空格分割: "<<endl;
+            cin>>cinS>>cinP;
+            QueryPerformanceFrequency(&f);
+            dqFreq=(double)f.QuadPart;
+            QueryPerformanceCounter(&time_start);
+            int pp=subSet[sPosition[subDict[cinS]]].pPosition[preDict[cinP]];
+            int objIndex=subSet[sPosition[subDict[cinS]]].p[pp].obj[0];
+            cout<<"object= "<<revSubDict[objIndex]<<endl;
+            QueryPerformanceCounter(&time_over);
+            run_time=1000000*(time_over.QuadPart-time_start.QuadPart)/dqFreq;
+            printf("\nrun_time：%fus\n",run_time);
         }
+        else if(choose==1)
+        {
+            cout<<"请输入主语和宾语，以空格分割: "<<endl;
+            cin>>cinS>>cinO;
+            QueryPerformanceFrequency(&f);
+            dqFreq=(double)f.QuadPart;
+            QueryPerformanceCounter(&time_start);
+            subject selectP=subSet[sPosition[subDict[cinS]]];
+            vector<predicate> preInSelectData=selectP.p;
+            for(auto iter: preInSelectData)
+            {
+                cout<<"iter.predicate="<<iter.pre<<endl;
+                if(iter.objExist[subDict[cinO]]==1)
+                {
+                    cout<<revPreDict[iter.pre]<<" "<<endl;
+                }
+            }
+            QueryPerformanceCounter(&time_over);
+            run_time=1000000*(time_over.QuadPart-time_start.QuadPart)/dqFreq;
+            printf("\nrun_time：%fus\n",run_time);
+        }
+        else{
+            break;
+        }
+        cout<<"请输入你要执行的查询类型0(s p ?o),1(s ?p o),2(quit):"<<endl;
     }
-
-    QueryPerformanceCounter(&time_over);
-	run_time=1000000*(time_over.QuadPart-time_start.QuadPart)/dqFreq;
-	printf("\nrun_time：%fus\n",run_time);
     return 0;
 }

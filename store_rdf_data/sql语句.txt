@@ -1,0 +1,61 @@
+<http://db.uwaterloo.ca/~galuc/wsdbm/City0> <http://www.geonames.org/ontology#parentCountry>
+<http://db.uwaterloo.ca/~galuc/wsdbm/City0> <http://db.uwaterloo.ca/~galuc/wsdbm/Country6>
+
+
+<http://db.uwaterloo.ca/~galuc/wsdbm/City100> <http://www.geonames.org/ontology#parentCountry>
+<http://db.uwaterloo.ca/~galuc/wsdbm/City100> <http://db.uwaterloo.ca/~galuc/wsdbm/Country2>
+
+
+<http://db.uwaterloo.ca/~galuc/wsdbm/City101> <http://www.geonames.org/ontology#parentCountry>
+<http://db.uwaterloo.ca/~galuc/wsdbm/City101> <http://db.uwaterloo.ca/~galuc/wsdbm/Country2> 
+
+<http://db.uwaterloo.ca/~galuc/wsdbm/City102> <http://www.geonames.org/ontology#parentCountry>
+<http://db.uwaterloo.ca/~galuc/wsdbm/City102> <http://db.uwaterloo.ca/~galuc/wsdbm/Country17>
+
+<http://db.uwaterloo.ca/~galuc/wsdbm/City103> <http://www.geonames.org/ontology#parentCountry>
+<http://db.uwaterloo.ca/~galuc/wsdbm/City103> <http://db.uwaterloo.ca/~galuc/wsdbm/Country3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<http://db.uwaterloo.ca/~galuc/wsdbm/User43550>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://db.uwaterloo.ca/~galuc/wsdbm/Role0> .
+<http://db.uwaterloo.ca/~galuc/wsdbm/User43550>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://db.uwaterloo.ca/~galuc/wsdbm/Role2> .
+<http://db.uwaterloo.ca/~galuc/wsdbm/User43550>	<http://xmlns.com/foaf/age>	<http://db.uwaterloo.ca/~galuc/wsdbm/AgeGroup4> .
+<http://db.uwaterloo.ca/~galuc/wsdbm/User43550>	<http://xmlns.com/foaf/familyName>	"JIMMY" .
+<http://db.uwaterloo.ca/~galuc/wsdbm/User43550>	<http://xmlns.com/foaf/givenName>	"RICKY" .
+
+
+<http://db.uwaterloo.ca/~galuc/wsdbm/Website9>	<http://db.uwaterloo.ca/~galuc/wsdbm/hits>	"4472" .
+<http://db.uwaterloo.ca/~galuc/wsdbm/Website9>	<http://schema.org/language>	<http://db.uwaterloo.ca/~galuc/wsdbm/Language4> .
