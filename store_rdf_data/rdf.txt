@@ -1,0 +1,5 @@
+<http://db.uwaterloo.ca/~galuc/wsdbm/User44234>	<http://db.uwaterloo.ca/~galuc/wsdbm/friendOf>	<http://db.uwaterloo.ca/~galuc/wsdbm/User57186> .
+<http://db.uwaterloo.ca/~galuc/wsdbm/User44234>	<http://db.uwaterloo.ca/~galuc/wsdbm/friendOf>	<http://db.uwaterloo.ca/~galuc/wsdbm/User58266> .
+<http://db.uwaterloo.ca/~galuc/wsdbm/User44234>	<http://db.uwaterloo.ca/~galuc/wsdbm/friendOf>	<http://db.uwaterloo.ca/~galuc/wsdbm/User63250> .
+<http://db.uwaterloo.ca/~galuc/wsdbm/User44234>	<http://db.uwaterloo.ca/~galuc/wsdbm/friendOf>	<http://db.uwaterloo.ca/~galuc/wsdbm/User64197> .
+<http://db.uwaterloo.ca/~galuc/wsdbm/User44234>	<http://db.uwaterloo.ca/~galuc/wsdbm/friendOf>	<http://db.uwaterloo.ca/~galuc/wsdbm/User79063> .

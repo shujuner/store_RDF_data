@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1545023576 source:g:\codeblocks_c++\store_rdf_data\store_rdf_data\main.cpp
+	"common.h"
+	"triple.h"
+	"variables.h"
+	"function.h"
+	<windows.h>
+
+1544880555 g:\codeblocks_c++\store_rdf_data\store_rdf_data\common.h
+	<iostream>
+	<fstream>
+	<map>
+	<vector>
+	<set>
+	<algorithm>
+	<map>
+
+1545016163 g:\codeblocks_c++\store_rdf_data\store_rdf_data\triple.h
+	"common.h"
+
+1545015730 g:\codeblocks_c++\store_rdf_data\store_rdf_data\variables.h
+	"common.h"
+	"triple.h"
+
+1544617845 g:\codeblocks_c++\store_rdf_data\store_rdf_data\function.h
+	"common.h"
+
